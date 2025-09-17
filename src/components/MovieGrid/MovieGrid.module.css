@@ -1,7 +1,4 @@
 .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 16px;
     width: 100%;
 }
 
@@ -19,9 +16,8 @@
 }
 
 .poster {
-    display: block;
     width: 100%;
-    aspect-ratio: 2 / 3;
+    aspect-ratio: 2/3;
     object-fit: cover;
     background: #f1f5f9;
 }
@@ -40,8 +36,4 @@
 
 .empty {
     opacity: .7;
-}
-
-.sentinel {
-    height: 1px;
 }

@@ -28,8 +28,7 @@ export default function MovieModal({ movie, onClose }: MovieModalProps) {
   };
 
   const bigSrc =
-    imgUrl(movie.backdrop_path, 'w780') ||
-    imgUrl(movie.poster_path, 'w500');
+    imgUrl(movie.backdrop_path, 'w780') || imgUrl(movie.poster_path, 'w500');
 
   return createPortal(
     <div className={css.backdrop} role="dialog" aria-modal="true" onClick={onBackdropClick}>

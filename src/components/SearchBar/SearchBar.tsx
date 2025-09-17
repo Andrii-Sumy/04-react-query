@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, type FormEvent } from 'react';
 import { toast } from 'react-hot-toast';
 import styles from './SearchBar.module.css';
 
@@ -18,8 +18,13 @@ export default function SearchBar({ onSubmit }: SearchBarProps) {
     onSubmit(value);
   };
 
+  const onSubmitForm = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    action(new FormData(e.currentTarget));
+  };
+
   return (
-    <form className={styles.form} action={action}>
+    <form className={styles.form} action={action} onSubmit={onSubmitForm}>
       <input
         name="query"
         className={styles.input}
