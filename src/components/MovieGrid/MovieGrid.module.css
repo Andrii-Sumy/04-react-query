@@ -1,0 +1,47 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 16px;
+    width: 100%;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform .15s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+.poster {
+    display: block;
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    background: #f1f5f9;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 14px;
+    padding: 8px 10px 4px;
+}
+
+.meta {
+    font-size: 12px;
+    opacity: .7;
+    padding: 0 10px 10px;
+}
+
+.empty {
+    opacity: .7;
+}
+
+.sentinel {
+    height: 1px;
+}
